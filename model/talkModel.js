@@ -11,6 +11,7 @@ const talkSchema = mongoose.Schema(
       type: String,
       required: [true, "Talk something"],
     },
+    hidden: Boolean,
   },
   {
     timestamps: true, // crea campos automaticos de timestamps
