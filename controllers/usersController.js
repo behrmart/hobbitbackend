@@ -3,12 +3,12 @@ const bcrypt = require("bcryptjs");
 const asyncHandler = require("express-async-handler");
 const User = require("../model/userModel");
 
-const registrarUser = asyncHandler(async (req, res) => {
+const createUser = asyncHandler(async (req, res) => {
   const { name, email, password } = req.body;
 
   if (!name || !email || !password) {
     res.status(400);
-    throw new Error("Faltan datos de usuario, verificar");
+    throw new Error("Missing user data, please fill all fields");
   }
 
   // Verificar si ese usuario existe
@@ -77,7 +77,7 @@ const generarToken = (id) => {
 };
 
 module.exports = {
-  registrarUser,
+  createUser,
   loginUser,
   misDatos,
 };

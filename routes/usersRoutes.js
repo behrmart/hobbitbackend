@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const {
-  //createUser,
+  createUser,
   loginUser,
   //userData,
   //updateUser,
@@ -10,7 +10,7 @@ const {
 const { protect } = require("../middleware/authMiddleware");
 
 // Endpoints Publicos
-//router.post("/", createUser);
+router.post("/", createUser);
 router.post("/login", loginUser);
 
 //Endpoints Privados
