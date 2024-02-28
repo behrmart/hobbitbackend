@@ -17,7 +17,7 @@ app.use(express.json()); //para recibir info por un formulario en body
 app.use(express.urlencoded({ extended: false }));
 
 app.use("/api/hobbittalk", require("./routes/hobbittalkRoutes"));
-//app.use("/api/users", require("./routes/usersRoutes.js"));
+app.use("/api/users", require("./routes/usersRoutes"));
 
 app.use(errorHandler);
 
